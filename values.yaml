@@ -46,11 +46,11 @@ service:
 ingress:
   enabled: true
   className: "nginx"
-  annotations: {}
-    # kubernetes.io/ingress.class: nginx
+  annotations:
+    kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: laravel.codeware.local
+    - host: laravel-app.codeware.icu
       paths:
         - path: /
           pathType: ImplementationSpecific
